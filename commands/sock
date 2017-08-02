@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# ヘルプ出力関数
+usage(){
+    cat << _EOS_
+    Usage:
+        $(basename $0) <file>
+        $(basename $0) <-h|--help>
+_EOS_
+}
+
+# オプション解析で使う変数の初期化
+OPTS=$(getopt -o "h" -l "help" -- "$@")
+eval set -- "$OPTS"
+while :; do
+    case "$1" in
+    '--') shift; break;;
+    '-h' | '--help') usage; exit 0;;
+    esac
+done
+
+if [ $# -gt 1 ]; then
+    echo -e "\e[31m[error] iligal arguments\e[m" >&2
+    usage >&2
+    exit 1
+fi
+
+FILE=$1
+
+if [ ! -f $FILE ]; then 
+    echo -e "\e[31m[error] $FILE is not file.\e[m" >&2
+    usage >&2
+    exit 1
+fi
+
+killall socat
+socat tcp-listen:4444,reuseaddr,fork exec:$FILE &
+
+echo exec: $FILE
+echo listen-port: 4444

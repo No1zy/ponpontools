@@ -15,13 +15,13 @@ _EOS_
 # オプション解析で使う変数の初期化
 DATA=""
 BIN=86
-OPTS=$(getopt -o "f:x:h:" -l "help" -- "$@")
+OPTS=$(getopt -o "f:x:h" -l "help" -- "$@")
 [ $? -ne 0 ] && usage >&2 && exit 1
 eval set -- "$OPTS"
 while :; do
     case "$1" in
     '-f') DATA=$2; shift 2;;
-	'-x') BIN=$2; shift 2;;
+    '-x') BIN=$2; shift 2;;
     '--') shift; break;;
     '-h'|'--help')usage; exit 0;;
     *) echo "[error] illegal option" >&2; usage >&2; exit 1;;
