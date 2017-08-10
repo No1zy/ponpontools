@@ -34,7 +34,7 @@ if [ ! -f $FILE ]; then
 fi
 
 killall socat
-socat tcp-listen:4444,reuseaddr,fork exec:$FILE &
+socat tcp-listen:4444,reuseaddr,fork exec:./$FILE &
 
 echo exec: $FILE
 echo listen-port: 4444
