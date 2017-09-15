@@ -25,13 +25,13 @@ Our documentation is available at [docs.pwntools.com](https://docs.pwntools.com/
 1. generate an exploit template
 generate an exploit.py and a cmd(gdb script)
 ```sh
-xready --host < remote host > --port < remote port > --arch < architecture > --libc < libc file > < binary file >
+xready --host [remote host] --port [remote port] --arch [architecture] --libc [libc file] [binary file]
 ```
 
 2. Socat wrapper for local exploits
 The specified executable file listens on 444 ports
 ```sh
-sock < binary file >
+sock [binary file]
 ```
 
 To get you started, we've provided some example solutions for past CTF challenges in our [write-ups repository](https://github.com/No1zy/ctf/tree/master/writeups).
