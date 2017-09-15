@@ -1,5 +1,0 @@
-#!/bin/sh
-
-MY_PATH="$HOME/ponpontools/"
-
-cp $MY_PATH/etc/exploit.py .
