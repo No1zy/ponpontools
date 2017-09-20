@@ -35,7 +35,7 @@ def main(args):
                              host=args.host,
                              port=args.port,
                              libc=args.libc,
-                             arch=args.arch,)
+                             arch=args.arch)
     # Fix Mako formatting bs
     output = re.sub('\n\n\n', '\n\n', output)
 
@@ -46,10 +46,6 @@ def main(args):
     f = open('cmd', 'w')
     f.write('')
     f.close()
-    
-    if not sys.stdout.isatty():
-        try: os.fchmod(sys.stdout.fileno(), 0700)
-        except OSError: pass
 
 if __name__ == '__main__':
     pwnlib.commandline.common.main(__file__)

@@ -97,7 +97,7 @@ setup(
             'data/binutils/*',
             'data/includes/*.h',
             'data/includes/*/*.h',
-            'data/templates/*.mako',
+            'data/templates/*',
         ] + templates,
     },
     entry_points = {'console_scripts': console_scripts},
