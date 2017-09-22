@@ -1,7 +1,6 @@
 # ponpontools - CTF toolkit (pwntools extension) 
 
 [![Docs](https://readthedocs.org/projects/pwntools/badge/?version=stable)](https://docs.pwntools.com/)
-[![Twitter](https://twitter.com/no1zy_sec)](https://twitter.com/no1zy\_sec)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://choosealicense.com/licenses/mit/)
 
 Pwntools is a CTF framework and exploit development library. Written in Python, it is designed for rapid prototyping and development, and intended to make exploit writing as simple as possible.
@@ -29,7 +28,7 @@ xready --host [remote host] --port [remote port] --arch [architecture] --libc [l
 ```
 
 2. Socat wrapper for local exploits
-The specified executable file listens on 444 ports
+The specified executable file listens on 4444 ports
 ```sh
 sock [binary file]
 ```
