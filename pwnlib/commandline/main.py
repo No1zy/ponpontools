@@ -20,12 +20,12 @@ from pwnlib.commandline import scramble
 from pwnlib.commandline import shellcraft
 from pwnlib.commandline import template
 from pwnlib.commandline import unhex
-from pwnlib.commandline import sock
-from pwnlib.commandline import xready
-from pwnlib.commandline import x
 from pwnlib.commandline import update
 from pwnlib.commandline.common import parser
 from pwnlib.context import context
+from extension.commandline import xready
+from extension.commandline import x
+from extension.commandline import sock
 
 commands = {
     'asm': asm.main,

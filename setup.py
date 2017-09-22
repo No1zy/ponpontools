@@ -42,6 +42,17 @@ for filename in glob.glob('pwnlib/commandline/*'):
     if not flag:
         console_scripts.append(script)
 
+for filename in glob.glob('extension/commandline/*'):
+    filename = os.path.basename(filename)
+    filename, ext = os.path.splitext(filename)
+
+    if ext != '.py' or '__init__' in filename:
+        continue
+
+    script = '%s=pwnlib.commandline.common:main' % filename
+    if not flag:
+        console_scripts.append(script)
+
 install_requires     = ['paramiko>=1.15.2',
                         'mako>=1.0.0',
                         'pyelftools>=0.2.4',
@@ -99,6 +110,9 @@ setup(
             'data/includes/*/*.h',
             'data/templates/*',
         ] + templates,
+        'extension': [
+            'data/templates/*',
+        ]
     },
     entry_points = {'console_scripts': console_scripts},
     scripts              = glob.glob("bin/*"),

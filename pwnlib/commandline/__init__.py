@@ -19,7 +19,4 @@ __all__ = [
     'shellcraft',
     'unhex',
     'update',
-    'sock',
-    'xready',
-    'x',
 ]
