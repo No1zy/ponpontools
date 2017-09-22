@@ -13,9 +13,9 @@ parser = common.parser_commands.add_parser(
 )
 
 parser.add_argument(
-    '--cmd','-c',
+    'cmd','',
     nargs='?',
-    help='exploit.py args')
+    help='[r | l | a]')
 
 def main(args):
     if args.cmd is not None:
