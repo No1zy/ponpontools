@@ -21,7 +21,7 @@ Our documentation is available at [docs.pwntools.com](https://docs.pwntools.com/
 
 ## commandline tools
 
-1. generate an exploit template
+### 1. generate an exploit template
 generate an exploit.py and a cmd(gdb script)
 ```sh
 xready --host [remote host] --port [remote port] --arch [architecture] --libc [libc file] [binary file]
@@ -48,13 +48,13 @@ or
 x
 ```
 
-3. Socat wrapper for local exploits
+### 3. Socat wrapper for local exploits
 The specified executable file listens on 4444 ports
 ```sh
 sock [binary file]
 ```
 
-4. Confirm or change current ASLR
+### 4. Confirm or change current ASLR
 Change ASLR
 ```sh
 aslr [on | off]
