@@ -4,4 +4,5 @@ __all__ = [
     'xready',
     'sock',
     'x',
+    'aslr',
 ] 

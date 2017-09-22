@@ -26,6 +26,7 @@ from pwnlib.context import context
 from extension.commandline import xready
 from extension.commandline import x
 from extension.commandline import sock
+from extension.commandline import aslr
 
 commands = {
     'asm': asm.main,
@@ -49,6 +50,7 @@ commands = {
     'sock': sock.main,
     'xready': xready.main,
     'x': x.main,
+    'aslr': aslr.main,
 }
 
 def main():

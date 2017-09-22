@@ -12,7 +12,10 @@ parser = common.parser_commands.add_parser(
     help = 'exec exploit.py'
 )
 
-parser.add_argument('--cmd','-c', help='exploit.py args')
+parser.add_argument(
+    '--cmd','-c',
+    nargs='?',
+    help='exploit.py args')
 
 def main(args):
     if args.cmd is not None:

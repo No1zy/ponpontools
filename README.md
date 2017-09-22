@@ -26,11 +26,42 @@ generate an exploit.py and a cmd(gdb script)
 ```sh
 xready --host [remote host] --port [remote port] --arch [architecture] --libc [libc file] [binary file]
 ```
+2. execuete exploit
+```sh
+x [argument]
+```
+Example:
+When exploiting remote
+```sh
+x r
+```
+When exploiting local
+```sh
+x l
+``` 
+When debugging exploit
+```sh
+x a 
+```
+or
+```sh
+x
+```
 
-2. Socat wrapper for local exploits
+3. Socat wrapper for local exploits
 The specified executable file listens on 4444 ports
 ```sh
 sock [binary file]
+```
+
+4. Confirm or change current ASLR
+Change ASLR
+```sh
+aslr [on | off]
+```
+Confirm current ASLR
+```sh
+aslr
 ```
 
 To get you started, we've provided some example solutions for past CTF challenges in our [write-ups repository](https://github.com/No1zy/ctf/tree/master/writeups).
