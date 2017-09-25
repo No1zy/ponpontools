@@ -13,7 +13,7 @@ parser = common.parser_commands.add_parser(
 )
 
 parser.add_argument(
-    'cmd','',
+    'cmd',
     nargs='?',
     help='[r | l | a]')
 

@@ -5,8 +5,8 @@ import re
 
 from pwn import *
 from pwnlib.commandline import common
-
 from mako.lookup import TemplateLookup
+import extension.data
 
 parser = common.parser_commands.add_parser(
     'xready',
@@ -23,7 +23,7 @@ def main(args):
     cache = None
 
     lookup = TemplateLookup(
-        directories      = [os.path.join(pwnlib.data.path, 'templates')],
+        directories      = [os.path.join(extension.data.path, 'templates')],
         module_directory = cache
     )
 
